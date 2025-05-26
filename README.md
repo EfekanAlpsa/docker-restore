@@ -38,6 +38,62 @@ Perfect for developers, testers, and DevOps engineers who need to quickly restor
 Clone the repository and give execute permissions:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/sqlserver-bak-restore-script.git
+git clone https://github.com/EfekanAlpsa/sqlserver-bak-restore-script.git
 cd sqlserver-bak-restore-script
 chmod +x restore_bak.sh
+```
+
+---
+
+## 📥 Usage
+
+```bash
+./restore_bak.sh </path/to/your.bak> <container_id> <sa_password>
+```
+
+---
+
+## 🧾 Example:
+
+```bash
+./restore_bak.sh ~/Desktop/TESTDATA1.BAK 68728237392 'YourStrong!Pass123'
+```
+
+---
+
+## 🧠 How It Works
+
+1 - Verifies that Docker and sqlcmd are installed.
+
+2 - Copies the .BAK file into the container under /var/opt/mssql/backup/.
+
+3 - Reads logical file names using RESTORE FILELISTONLY.
+
+4 - Restores the database to /var/opt/mssql/data/ using WITH MOVE.
+
+5 - Shows success or error messages clearly.
+
+---
+
+## 🔐 Security Note
+
+The password is masked during display, but passed in plain text via command-line arguments.
+Avoid using this in production environments without modifications.
+
+---
+
+## Troubleshooting
+
+❌ "Exclusive access could not be obtained": Another process is using the database. Make sure it's not in use.
+
+❌ "Could not get logical names": The .BAK file might be corrupted or incompatible with the SQL Server version.
+
+---
+
+## 🤝 Contributions
+
+Pull requests are welcome!
+If you find a bug or want to suggest a feature, open an issue.
+
+
+Made by Efekan Alipasha.
