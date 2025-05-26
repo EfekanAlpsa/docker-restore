@@ -2,7 +2,7 @@
 
 # -----------------------------
 # Restore .BAK File to SQL Server Docker Container
-# Author: Efekan
+# Author: Efekan Alipasha
 # -----------------------------
 
 # ✅ Banner
