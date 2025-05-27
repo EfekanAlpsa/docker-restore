@@ -38,8 +38,8 @@ Perfect for developers, testers, and DevOps engineers who need to quickly restor
 Clone the repository and give execute permissions:
 
 ```bash
-git clone https://github.com/EfekanAlpsa/sqlserver-bak-restore-script.git
-cd sqlserver-bak-restore-script
+git clone https://github.com/EfekanAlpsa/docker-restore.git
+cd docker-restore
 chmod +x restore_bak.sh
 ```
 
